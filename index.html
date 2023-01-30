@@ -2,11 +2,14 @@
 <html>
 <head>
   <title>Clicky Cats</title>
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Clicky Cats</h1>
-  <img src="images/currency.png">:<span id="score">0</span></p>
+    <header>
+        <h1>Clicky Cats</h1>
+        <img src="images/currency.png">:<span id="score">0</span></p>
+    </header>
   <section class="main-contain">
     <div class="player-box">
         <h2>Rainbow Cat</h2>
@@ -15,21 +18,29 @@
         <p>Attack: <span id="player-attack">10</span></p>
         <p>Defense: <span id="player-defense">5</span></p>
     </div>
+    
     <div class="enemy-box">  
         <h2>Froog</h2>
-        <img src="images/froog.PNG" class="character" id="enemy-img">
+        <img src="images/froog.png" class="character" id="enemy-img">
         <p>HEALTH: <span id="enemy-health">50</span></p>
         <p>Attack: <span id="enemy-attack">6</span></p>
         <p>Defense: <span id="enemy-defense">5</span></p>
     </div>
   </section>
-  <button id="combat-button" onclick="combat()">Fight</button>
-  <br/>
-  <button id="upgrade-attack" onclick="upgradeAttack()">Upgrade Attack</button>
-  <button id="upgrade-defense" onclick="upgradeDefense()">Upgrade Defense</button>
-  <br/>
-  <button id="auto-combat-button" onclick="autoCombat()">Auto Combat</button>
-  <button id="stop-auto-combat-button" onclick="clearInterval(autoCombatId)">Stop Auto Combat</button>
+  <section class="buttons">
+    <button id="combat-button" onclick="combat()">Fight</button>
+    <br/>
+    <button id="upgrade-attack" onclick="upgradeAttack()">Upgrade Attack</button>
+    <button id="upgrade-defense" onclick="upgradeDefense()">Upgrade Defense</button>
+    
+    <section class="auto-area">
+        <div class="auto-btn-contain">
+            <button id="auto-combat-button" onclick="autoCombat();">Auto Combat</button>
+            <button id="stop-auto-combat-button" onclick="clearInterval(autoCombatId)">Stop Auto Combat</button>
+        </div>  
+        
+    </section>
+    </section>
   <script src="js/script.js"></script>
 </body>
 </html>

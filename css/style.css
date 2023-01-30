@@ -1,34 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
 
 body {
-  font-family: 'Cabin Sketch', cursive;
-  text-align: center;
+font-family: 'Cabin Sketch', cursive;
+text-align: center;
 }
 
 button{
-    font-family: 'Cabin Sketch', cursive;
-    border:none;
-    background-color: rgb(39, 23, 82);
-    color: white;
-    cursor: pointer;
+font-family: 'Cabin Sketch', cursive;
+border:none;
+background-color: rgb(39, 23, 82);
+color: white;
+cursor: pointer;
+width:15%;
+margin:1%;
+padding: 1%;
 }
 
 h1 {
-    font-size: 4em;
+font-size: 4em;
+font-weight: 700;
+}
+
+h2 {
+font-weight: 700;
+font-size: 2.5em
 }
 
 .main-contain {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-color: white;;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+background-color: white;;
 }
 
 .attack-animation {
-    animation: attack-animation 0.5s;
-  }
-  
-  @keyframes attack-animation {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(30deg);}
-  }
+animation: attack-animation 0.5s;
+transition: all .4s ease;
+}
+
+@keyframes attack-animation {
+from {transform: rotate(0deg);}
+to {transform: rotate(15deg);}
+}
+
+.enemy-attack-animation {
+animation: enemy-attack-animation 0.5s;
+transition: all .4s ease;
+}
+
+@keyframes enemy-attack-animation {
+from {transform:translateY(0);}
+to {transform:translateY(-10px);}
+
+}
+
+@keyframes death-animation {
+0% { opacity: 1; }
+100% { opacity: 0; }
+}
+
+.death-animation {
+animation: death-animation .5s;
+}
+
+.auto-area{
+    display:flex;
+    flex-direction: column;
+    width:50%;
+}
+
+.auto-area button {
+    width: 33%;
+    padding: 2%;
+}
