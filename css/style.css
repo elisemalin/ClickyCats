@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
+
+body {
+  font-family: 'Cabin Sketch', cursive;
+  text-align: center;
+}
+
+button{
+    font-family: 'Cabin Sketch', cursive;
+    border:none;
+    background-color: rgb(39, 23, 82);
+    color: white;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+.main-contain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: white;;
+}
+
+.attack-animation {
+    animation: attack-animation 0.5s;
+  }
+  
+  @keyframes attack-animation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(30deg);}
+  }
